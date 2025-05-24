@@ -1,0 +1,394 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures full viewport height */
+  background-color: #ffffff;
+}
+
+h2, h3, p{
+  font-family: "Kanit", sans-serif;
+}
+
+main {
+  box-sizing: border-box;
+  flex-grow: 1;
+  min-height: 100vh;  /* You can remove the header offset here */
+  /* padding-top: 72px;  <-- removed */
+}
+
+header {
+  position: fixed;
+  top: 0;               /* Pin header to top */
+  left: 0;
+  z-index: 100;
+  background-color: #0b0b0bd8;
+  backdrop-filter: blur(10px);
+  height: 72px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 15px;
+  padding: 15px;
+  display: block;
+  text-align: center;
+  transition: color 0.10s ease-in;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a:hover {
+  color: #888888;
+}
+
+.navbar img {
+  width: 80px;
+  height: auto;
+}
+
+/* ==========================================================================
+   BUTTONS & ICONS
+   ========================================================================== */
+
+.navbar button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  /* Remove or adjust any invalid line-height setting */
+}
+
+.dlbutton {
+  background-color: yellow;
+  color: black;
+  padding: 0 5px;
+}
+
+.sibutton {
+  background-color: #50505087;
+  border-color: #50505087;
+  color: white;
+  padding: 0;
+  margin-right: 15px;
+}
+
+.dlbutton a {
+  color: black;
+}
+
+.navbar svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+.epiclogo path {
+  fill: white;
+  width: 48px;
+  height: 48px;
+}
+
+.epiclogo path:hover {
+  fill: #888888;
+}
+
+.button-container {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  background-color: #333333e4;
+  border-color: #464646;
+  backdrop-filter: blur(8px);
+  max-width: 260px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 200;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.dropdown:hover .dropdown_menu {
+  display: block;
+}
+
+.dropdown_menu a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown_menu a:hover {
+  color: white !important;
+  border-radius: 10px;
+  max-width: 210px;
+  background-color: #ffffff26;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.search {
+  --padding: 4px;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  padding: var(--padding);
+  border-radius: 28px;
+  background-color: #333333;
+  transition: box-shadow 0.2s;
+  margin: 0 8px;
+  border-color: #b7b7b7;
+}
+
+.search_input {
+  font-size: 16px;
+  color: #b7b7b7;
+  margin-left: var(--padding);
+  outline: none;
+  border: none;
+  background: transparent;
+  width: 400px;
+}
+
+.search_input::placeholder,
+.search_icon {
+  color: #b7b7b7;
+  margin-left: 6px;
+}
+
+.color {
+    width: 100%;
+    height: 100px;
+    background-color: #18181C;
+    position: absolute;
+    z-index: -10;
+}
+
+.cover_image {
+    margin-top: 60px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.body_text {
+    padding-top: 20px;
+    padding-bottom: 25px;
+    margin: auto;
+    width: 56%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.25);
+}
+
+.body_text .title_text h1 {
+  font-family: 'Kanit', sans-serif;
+}
+
+.body_text img {
+    max-width: 90%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.body_text p, h2, h3 {
+    gap: 5px;
+    font-size: 125%;
+    text-align: left;
+    width: 100%;
+}
+
+
+
+.body_list {
+    text-align: center;
+}
+
+.body_list {
+    width: 100%; /* Make the container as wide as its parent */
+}
+
+.body_list ul {
+    width: 100%;       /* Ensure the list takes the full width */
+    margin: 0;         /* Remove any extra margin */
+    padding-left: 20px;/* Optional: indent the list for standard bullet spacing */
+    text-align: left;  /* Keep the list content left-aligned */
+}
+
+.body_list li {
+    font-size: 18px;
+    margin: 12px 0;
+    font-family: "Kanit" sans-serif;
+}
+
+.body_text iframe {
+    width: 850px;
+    height: 475px;
+
+}
+
+/*============FOOTER==============*/
+
+/* Footer Container */
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 40px 60px; /* Increased top-bottom & left-right padding */
+  font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 100;
+}
+
+/* Top Row: Logo & Social Links */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #444; /* Keeps only one separator */
+}
+
+.footer-logo {
+  width: 90px;
+}
+
+.social-links a {
+  margin-left: 10px;
+}
+
+.social-links img {
+  width: 32px;
+  height: 32px;
+  transition: opacity 0.3s ease;
+}
+
+.social-links img:hover {
+  opacity: 0.7;
+}
+
+/* Footer Navigation (Three Columns) */
+.footer-nav {
+  display: flex;
+  justify-content: flex-start; /* Aligns columns to the left */
+  gap: 80px; /* Increased space between columns */
+  padding: 20px 40px; /* Adds horizontal padding */
+}
+
+.footer-column {
+  text-align: left;
+  padding-right: 30px; /* Ensures columns stay neatly aligned */
+}
+
+.footer-column h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin: 5px 0;
+}
+
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #ccc;
+}
+
+/* Footer Icons */
+.footer-icons {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+  margin: 20px 0;
+  padding-top: 50px;
+  border-top: 1px solid #444; /* Only one separator kept */
+}
+
+.footer-icons img {
+  width: 48px;
+  height: 48px;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  border-top: 1px solid #444; /* Keeps only one separator above copyright */
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom p {
+  font-size: 10px;
+}
+
+.back-to-top {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: bold;
+  outline: solid 1px rgba(255, 255, 255, 0);
+  outline-offset: 8px;
+  transition: 0.3s ease-out;
+  background-color: yellow;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.back-to-top:hover {
+  outline: solid 3px white;
+  outline-offset: 3px;
+}
+
+/* Terms, Privacy, Security Links */
+.footer-links {
+  display: flex;
+  justify-content: left;
+  gap: 15px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
