@@ -1,8 +1,12 @@
+* {
+    font-family: "Kanit" sans-serif !important;
+}
+
 body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensures full viewport height */
+  min-height: 100vh;
   background-color: #ffffff;
 }
 
@@ -13,13 +17,12 @@ h2, h3, p{
 main {
   box-sizing: border-box;
   flex-grow: 1;
-  min-height: 100vh;  /* You can remove the header offset here */
-  /* padding-top: 72px;  <-- removed */
+  min-height: 100vh;
 }
 
 header {
   position: fixed;
-  top: 0;               /* Pin header to top */
+  top: 0;
   left: 0;
   z-index: 100;
   background-color: #0b0b0bd8;
@@ -64,10 +67,6 @@ header {
   height: auto;
 }
 
-/* ==========================================================================
-   BUTTONS & ICONS
-   ========================================================================== */
-
 .navbar button {
   display: flex;
   align-items: center;
@@ -76,7 +75,6 @@ header {
   border: none;
   border-radius: 8px;
   font-weight: bold;
-  /* Remove or adjust any invalid line-height setting */
 }
 
 .dlbutton {
@@ -224,27 +222,23 @@ header {
     width: 100%;
 }
 
-
-
 .body_list {
     text-align: center;
-}
-
-.body_list {
-    width: 100%; /* Make the container as wide as its parent */
+    width: 100%; 
 }
 
 .body_list ul {
-    width: 100%;       /* Ensure the list takes the full width */
-    margin: 0;         /* Remove any extra margin */
-    padding-left: 20px;/* Optional: indent the list for standard bullet spacing */
-    text-align: left;  /* Keep the list content left-aligned */
+    width: 100%;
+    margin: 0;
+    padding-left: 20px;
+    text-align: left;
+    font-family: "Kanit" sans-serif !important;
 }
 
 .body_list li {
     font-size: 18px;
     margin: 12px 0;
-    font-family: "Kanit" sans-serif;
+    font-family: "Kanit" sans-serif !important;
 }
 
 .body_text iframe {
@@ -255,23 +249,21 @@ header {
 
 /*============FOOTER==============*/
 
-/* Footer Container */
 .footer {
   background-color: #222;
   color: white;
-  padding: 40px 60px; /* Increased top-bottom & left-right padding */
+  padding: 40px 60px;
   font-family: Arial, sans-serif;
   position: relative;
   z-index: 100;
 }
 
-/* Top Row: Logo & Social Links */
 .footer-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 20px;
-  border-bottom: 1px solid #444; /* Keeps only one separator */
+  border-bottom: 1px solid #444;
 }
 
 .footer-logo {
@@ -292,17 +284,16 @@ header {
   opacity: 0.7;
 }
 
-/* Footer Navigation (Three Columns) */
 .footer-nav {
   display: flex;
-  justify-content: flex-start; /* Aligns columns to the left */
-  gap: 80px; /* Increased space between columns */
-  padding: 20px 40px; /* Adds horizontal padding */
+  justify-content: flex-start;
+  gap: 80px;
+  padding: 20px 40px;
 }
 
 .footer-column {
   text-align: left;
-  padding-right: 30px; /* Ensures columns stay neatly aligned */
+  padding-right: 30px;
 }
 
 .footer-column h3 {
@@ -329,14 +320,13 @@ header {
   color: #ccc;
 }
 
-/* Footer Icons */
 .footer-icons {
   display: flex;
   justify-content: left;
   gap: 20px;
   margin: 20px 0;
   padding-top: 50px;
-  border-top: 1px solid #444; /* Only one separator kept */
+  border-top: 1px solid #444;
 }
 
 .footer-icons img {
@@ -344,9 +334,8 @@ header {
   height: 48px;
 }
 
-/* Footer Bottom Section */
 .footer-bottom {
-  border-top: 1px solid #444; /* Keeps only one separator above copyright */
+  border-top: 1px solid #444;
   padding-top: 15px;
   display: flex;
   justify-content: space-between;
@@ -374,7 +363,6 @@ header {
   outline-offset: 3px;
 }
 
-/* Terms, Privacy, Security Links */
 .footer-links {
   display: flex;
   justify-content: left;
